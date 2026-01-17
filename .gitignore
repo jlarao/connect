@@ -1,0 +1,39 @@
+# ==================================
+# Archivos a ignorar en Git
+# ==================================
+
+# Variables de entorno (IMPORTANTE: contiene datos sensibles)
+.env
+
+# Carpeta de dependencias (si usas Composer en el futuro)
+/vendor/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+/logs/
+
+# Archivos temporales
+*.tmp
+*.swp
+*.bak
+
+# IDE / Editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de caché
+*.cache
+
+# Uploads de usuarios (opcional, depende de tu caso)
+# /uploads/
+
+# Archivos de backup de base de datos
+*.sql
+*.sql.gz

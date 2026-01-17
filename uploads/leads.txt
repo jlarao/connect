@@ -1,0 +1,3 @@
+2026-01-11 07:19:36 | Test User | 5512345678 | Test City | Hello
+2026-01-11 07:22:07 | Test 2 | 1234567890 | City 2 | Hello again
+2026-01-11 07:24:13 | Test User | 5512345678 | Calle Falsa 123, Colonia Inventada | This is a test message.
