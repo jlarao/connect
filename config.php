@@ -63,8 +63,8 @@ define('BG_COLOR', '#f8fafc');        // Fondo slate muy claro
 // ===========================================
 define('SITE_NAME', 'ConectateYa');
 define('SITE_URL', env('SITE_URL', 'http://localhost/conectateya'));
-define('CONTACT_EMAIL', env('CONTACT_EMAIL', 'contacto@conectateya.mx'));
-define('WHATSAPP_NUMBER', env('WHATSAPP_NUMBER', '525500000000'));
+define('CONTACT_EMAIL', env('CONTACT_EMAIL', 'conectateya.dgo@gmail.com'));
+define('WHATSAPP_NUMBER', env('WHATSAPP_NUMBER', '+526183716515'));
 define('WHATSAPP_MESSAGE', '¡Hola! Me interesa conocer más sobre los planes de ConectateYa.');
 
 // ===========================================
@@ -84,40 +84,40 @@ define('GOOGLE_ANALYTICS_ID', env('GOOGLE_ANALYTICS_ID', ''));
 define('PLANS', [
     'fibra' => [
         [
-            'name' => 'Fibra Residencial 20',
-            'speed' => '20 Mbps',
-            'price' => '$399',
-            'features' => ['Simétrico', 'Streaming HD', 'WiFi Plus', 'Soporte 24/7'],
+            'name' => 'Fibra Residencial 25',
+            'speed' => '25 Mbps',
+            'price' => '$350',
+            'features' => ['Internet Ilimitado', 'WiFi'],
             'featured' => false
         ],
         [
-            'name' => 'Fibra Gamer 50',
-            'speed' => '50 Mbps',
-            'price' => '$599',
-            'features' => ['Baja Latencia', 'Ideal para Gaming', '4K Ready', 'Prioridad de Red'],
+            'name' => 'Fibra Residencial 40',
+            'speed' => '40 Mbps',
+            'price' => '$500',
+            'features' => ['Internet Ilimitado', 'WiFi'],
             'featured' => true
         ],
         [
-            'name' => 'Fibra Pro 100',
-            'speed' => '100 Mbps',
-            'price' => '$899',
-            'features' => ['Uso Intensivo', 'Multi-dispositivo', 'Soporte VIP', 'IP Fija Opcional'],
+            'name' => 'Fibra Negocio 25',
+            'speed' => '25 Mbps',
+            'price' => '$500',
+            'features' => ['Internet Ilimitado', 'WiFi'],
             'featured' => false
         ]
     ],
     'inalambrico' => [
         [
             'name' => 'Básico Casa',
-            'speed' => '10 Mbps',
-            'price' => '$299',
-            'features' => ['Ilimitado', 'Instalación Express', 'Navegación Estable', 'Ideal Home Office'],
+            'speed' => '7 Mbps',
+            'price' => '$350',
+            'features' => ['Internet Ilimitado', 'WiFi'],
             'featured' => false
         ],
         [
             'name' => 'Pyme Enlace',
-            'speed' => '20 Mbps',
-            'price' => '$499',
-            'features' => ['Enlace Dedicado', 'SLA Garantizado', 'Soporte Directo', 'Escalable'],
+            'speed' => '15 Mbps',
+            'price' => '$500',
+            'features' => ['Internet Ilimitado', 'WiFi'],
             'featured' => false
         ]
     ]

@@ -123,5 +123,7 @@
         mobileBtn.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
     </script>
+    
+    <?php require_once 'includes/cookie-banner.php'; ?>
 </body>
 </html>

@@ -11,31 +11,31 @@
     </div>
 
     <div class="container mx-auto px-[5%] lg:px-[10%] relative z-10">
-        <div class="max-w-3xl space-y-8">
+        <div class="max-w-3xl- space-y-8">
             <div class="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-md px-4 py-2 rounded-full text-white border border-white/20 animate-fade-in">
                 <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-                <span class="text-sm font-semibold tracking-wide uppercase">Internet de Nueva Generación</span>
+                <span class="text-sm font-semibold tracking-wide uppercase">Internet de Fibra optica y Antena</span>
             </div>
             
-            <h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight">
-                Velocidad real que te <span class="text-primary">conecta</span> con el mundo.
+            <h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight ">
+                <p> Bienvenido a <span class="text-primary">ConectateYa</span></p>
             </h1>
             
             <p class="text-xl text-slate-200 max-w-2xl leading-relaxed">
-                Disfruta de la máxima estabilidad con nuestra red de Fibra Óptica e Internet Inalámbrico. Sin plazos forzosos, sin lag, solo pura velocidad.
+                Somos una empresa mexicana con años de experiencia en el mercado, dedicada a ofrecer servicios de internet a nuestros clientes.
             </p>
 
             <div class="flex flex-wrap gap-4 pt-4">
                 <a href="#planes" class="bg-primary hover:bg-opacity-90 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">
                     Ver Planes Disponibles
                 </a>
-                <a href="#contacto" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:-translate-y-1">
+                <!-- <a href="#contacto" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:-translate-y-1">
                     Consultar Cobertura
-                </a>
+                </a> -->
             </div>
 
             <!-- Stats -->
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 pt-12 border-t border-white/10">
+            <!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-8 pt-12 border-t border-white/10">
                 <div>
                     <p class="text-3xl font-bold text-white">99.9%</p>
                     <p class="text-slate-400 text-sm italic">Uptime Garantizado</p>
@@ -48,13 +48,13 @@
                     <p class="text-3xl font-bold text-white">24/7</p>
                     <p class="text-slate-400 text-sm italic">Soporte Local</p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
 
 <!-- Why Choose Us -->
-<section id="beneficios" class="py-24 bg-white">
+<!-- <section id="beneficios" class="py-24 bg-white">
     <div class="container mx-auto px-[5%] lg:px-[10%]">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">¿Por qué nosotros?</h2>
@@ -63,7 +63,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Feature 1 -->
+            
             <div class="p-8 rounded-3xl bg-bglight border border-slate-100 hover:border-primary/30 transition-all group">
                 <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform">
                     <i data-lucide="zap" class="text-primary w-8 h-8"></i>
@@ -72,7 +72,7 @@
                 <p class="text-slate-500 leading-relaxed">Descargas y envíos de archivos pesados en cuestión de segundos, sin interrupciones.</p>
             </div>
 
-            <!-- Feature 2 -->
+            
             <div class="p-8 rounded-3xl bg-bglight border border-slate-100 hover:border-primary/30 transition-all group">
                 <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform">
                     <i data-lucide="shield-check" class="text-primary w-8 h-8"></i>
@@ -81,7 +81,7 @@
                 <p class="text-slate-500 leading-relaxed">Nuestra red está optimizada para streaming 4K y gaming competitivo con baja latencia.</p>
             </div>
 
-            <!-- Feature 3 -->
+            
             <div class="p-8 rounded-3xl bg-bglight border border-slate-100 hover:border-primary/30 transition-all group">
                 <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform">
                     <i data-lucide="headphones" class="text-primary w-8 h-8"></i>
@@ -90,7 +90,7 @@
                 <p class="text-slate-500 leading-relaxed">Olvídate de los bots. Habla directamente con técnicos locales listos para ayudarte.</p>
             </div>
 
-            <!-- Feature 4 -->
+            
             <div class="p-8 rounded-3xl bg-bglight border border-slate-100 hover:border-primary/30 transition-all group">
                 <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform">
                     <i data-lucide="map-pin" class="text-primary w-8 h-8"></i>
@@ -100,7 +100,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Plans Sections -->
 <section id="planes" class="py-24 bg-bglight">
@@ -112,7 +112,7 @@
 
         <!-- Fiber Plans Grid -->
         <h3 class="text-2xl font-bold text-secondary mb-8 flex items-center gap-3">
-            <i data-lucide="cable" class="text-primary"></i> Fibra Óptica Simétrica
+            <i data-lucide="cable" class="text-primary"></i> Fibra Óptica
         </h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             <?php foreach (PLANS['fibra'] as $plan): ?>
@@ -144,10 +144,10 @@
                     <?php endforeach; ?>
                 </ul>
 
-                <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>" 
+                <!-- <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>" 
                    class="w-full text-center py-4 rounded-2xl font-bold transition-all <?php echo $plan['featured'] ? 'bg-primary text-white shadow-lg shadow-primary/30 hover:bg-opacity-90' : 'bg-slate-100 text-secondary hover:bg-primary hover:text-white'; ?>">
                     Contratar Ahora
-                </a>
+                </a> -->
             </div>
             <?php endforeach; ?>
         </div>
@@ -176,10 +176,10 @@
                     <?php endforeach; ?>
                 </ul>
 
-                <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>" 
+                <!-- <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>" 
                    class="w-full text-center py-4 rounded-xl bg-slate-900 text-white font-bold hover:bg-primary transition-all">
                     Solicitar Información
-                </a>
+                </a> -->
             </div>
             <?php endforeach; ?>
         </div>
@@ -195,42 +195,66 @@
     <div class="container mx-auto px-[5%] lg:px-[10%] relative z-10">
         <div class="bg-secondary rounded-[3rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
             <!-- Info Side -->
-            <div class="lg:w-1/3 p-12 lg:p-16 bg-primary/10 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10">
+            <div class="lg:w-1/2 p-12 lg:p-16 bg-primary/10 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10">
                 <div>
-                    <h2 class="text-4xl font-bold text-white mb-6">¿Listo para volar?</h2>
-                    <p class="text-slate-400 text-lg mb-10">Déjanos tus datos y un asesor te contactará en menos de 15 minutos para validar cobertura en tu zona.</p>
+                    <h2 class="text-4xl font-bold text-white mb-6">Sobre nuestros paquetes</h2>
+                    <p class="text-slate-400 text-lg mb-10">Los precios incluyen IVA</p>
                     
                     <div class="space-y-6">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
-                                <i data-lucide="phone" class="text-primary"></i>
+                                <i data-lucide="user-cog" class="text-primary"></i>
                             </div>
                             <div>
-                                <p class="text-slate-500 text-xs font-bold uppercase">Llámanos</p>
-                                <p class="text-white font-semibold">+<?php echo WHATSAPP_NUMBER; ?></p>
+                                <p class="text-slate-500 text-xs font-bold uppercase">Instalación</p>
+                                <p class="text-white font-semibold">Costo para fibra de $1,500.00 </p>
+                                <p class="text-white font-semibold">Costo para antena de  $1,000.00 </p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
-                                <i data-lucide="mail" class="text-primary"></i>
+                                <i data-lucide="credit-card" class="text-primary"></i>
                             </div>
                             <div>
-                                <p class="text-slate-500 text-xs font-bold uppercase">Correo</p>
-                                <p class="text-white font-semibold"><?php echo CONTACT_EMAIL; ?></p>
+                                <p class="text-slate-500 text-xs font-bold uppercase">Forma de pago</p>
+                                <p class="text-white font-semibold">Efectivo directo en nuestra sucursal o mediante transferencia bancaria</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                                <i data-lucide="copyright" class="text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 text-xs font-bold uppercase">Tarifas registradas ante IFT</p>
+                                <p class="text-white font-semibold">En tramite</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-12 p-6 bg-white/5 rounded-2xl border border-white/5">
+                <!-- <div class="mt-12 p-6 bg-white/5 rounded-2xl border border-white/5">
                     <p class="text-white italic opacity-80 mb-4 cursor-default">"El cambio a Fibra con ConectateYa fue increíble. El ping en mis juegos bajó a la mitad."</p>
                     <p class="text-primary font-bold text-sm">- Ricardo M., Cliente Fibra Gamer</p>
-                </div>
+                </div> -->
             </div>
 
-            <!-- Form Side -->
-            <div class="lg:w-2/3 p-12 lg:p-16">
-                <?php if (isset($_GET['success'])): ?>
+            <!-- Image Side -->
+            <div class="lg:w-1/2 p-8 lg:p-12 flex items-center justify-center">
+                <div class="relative w-full h-full min-h-[300px] rounded-2xl overflow-hidden">
+                    <picture>
+                        <source srcset="assets/images/connectivity_packages.webp" type="image/webp">
+                        <img src="assets/images/connectivity_packages.png" 
+                             alt="Familia disfrutando de internet de fibra óptica en diferentes dispositivos" 
+                             class="w-full h-full object-cover rounded-2xl shadow-lg"
+                             width="800" 
+                             height="800"
+                             loading="lazy"
+                             decoding="async">
+                    </picture>
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary/50 to-transparent rounded-2xl"></div>
+                </div>
+                
+                <!-- <?php if (isset($_GET['success'])): ?>
                     <div class="bg-primary/20 border border-primary/30 rounded-2xl p-6 mb-8 flex items-center gap-4 animate-fade-in">
                         <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shrink-0">
                             <i data-lucide="check-circle" class="text-white"></i>
@@ -268,7 +292,7 @@
                             Enviar Solicitud de Cobertura
                         </button>
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>
