@@ -3,7 +3,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
                 <!-- Brand -->
                 <div class="space-y-6">
-                    <a href="#" class="flex items-center gap-3 group">
+                    <a href="index.php" class="flex items-center gap-3 group">
                         <img src="logo/logo.jpeg" alt="ConectateYa Logo" class="h-8 w-auto rounded-md shadow-sm">
                         <span class="text-xl font-bold text-white tracking-tight">
                             Conectate<span class="text-primary">Ya</span>
@@ -26,10 +26,10 @@
                 <div>
                     <h4 class="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">Empresa</h4>
                     <ul class="space-y-4">
-                        <li><a href="#inicio" class="hover:text-primary transition-colors">Inicio</a></li>
-                        <li><a href="#beneficios" class="hover:text-primary transition-colors">Nosotros</a></li>
-                        <li><a href="#planes" class="hover:text-primary transition-colors">Planes de Venta</a></li>
-                        <li><a href="#contacto" class="hover:text-primary transition-colors">Cobertura</a></li>
+                        <li><a href="index.php#inicio" class="hover:text-primary transition-colors">Inicio</a></li>
+                        <li><a href="index.php#beneficios" class="hover:text-primary transition-colors">Nosotros</a></li>
+                        <li><a href="index.php#planes" class="hover:text-primary transition-colors">Planes de Venta</a></li>
+                        <li><a href="index.php#contacto" class="hover:text-primary transition-colors">Cobertura</a></li>
                     </ul>
                 </div>
 

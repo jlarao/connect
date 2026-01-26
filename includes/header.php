@@ -7,6 +7,10 @@
     <title><?php echo META_TITLE; ?></title>
     <meta name="description" content="<?php echo META_DESCRIPTION; ?>">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logo/logo.jpeg">
+    <link rel="apple-touch-icon" href="logo/logo.jpeg">
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo GOOGLE_ANALYTICS_ID; ?>"></script>
     <script>
@@ -86,7 +90,7 @@
 </head>
 <body class="bg-bglight font-sans text-slate-700 antialiased overflow-x-hidden">
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-4 px-[5%] lg:px-[10%] flex justify-between items-center glass-nav">
-        <a href="#" class="flex items-center gap-3 group">
+        <a href="index.php" class="flex items-center gap-3 group">
             <img src="logo/logo.jpeg" alt="ConectateYa Logo" class="h-10 w-auto rounded-lg shadow-sm group-hover:scale-105 transition-transform duration-300">
             <span class="text-2xl font-bold text-secondary tracking-tight">
                 Conectate<span class="text-primary">Ya</span>
@@ -94,10 +98,10 @@
         </a>
 
         <ul class="hidden md:flex items-center gap-8 list-none">
-            <li><a href="#inicio" class="nav-link text-secondary font-medium hover:text-primary">Inicio</a></li>
-            <li><a href="#planes" class="nav-link text-secondary font-medium hover:text-primary">Planes</a></li>
-            <li><a href="#beneficios" class="nav-link text-secondary font-medium hover:text-primary">Beneficios</a></li>
-            <li><a href="#contacto" class="nav-link text-secondary font-medium hover:text-primary">Contacto</a></li>
+            <li><a href="index.php#inicio" class="nav-link text-secondary font-medium hover:text-primary">Inicio</a></li>
+            <li><a href="index.php#planes" class="nav-link text-secondary font-medium hover:text-primary">Planes</a></li>
+            <!-- <li><a href="index.php#beneficios" class="nav-link text-secondary font-medium hover:text-primary">Beneficios</a></li> -->
+            <!-- <li><a href="index.php#contacto" class="nav-link text-secondary font-medium hover:text-primary">Contacto</a></li> -->
             <li><a href="legal.php" class="nav-link text-secondary font-medium hover:text-primary">Legal</a></li>
         </ul>
 
@@ -114,10 +118,10 @@
     
     <!-- Mobile Menu Container -->
     <div id="mobile-menu" class="fixed inset-0 z-[45] bg-secondary/95 backdrop-blur-xl translate-x-full transition-transform duration-500 flex flex-col items-center justify-center gap-8 md:hidden">
-        <a href="#inicio" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Inicio</a>
-        <a href="#planes" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Planes</a>
-        <a href="#beneficios" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Beneficios</a>
-        <a href="#contacto" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Contacto</a>
+        <a href="index.php#inicio" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Inicio</a>
+        <a href="index.php#planes" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Planes</a>
+        <a href="index.php#beneficios" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Beneficios</a>
+        <a href="index.php#contacto" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Contacto</a>
         <a href="legal.php" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Legal</a>
         <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>" class="bg-primary text-white px-8 py-3 rounded-full font-bold text-xl mt-4">Soporte</a>
     </div>
