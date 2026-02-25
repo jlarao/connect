@@ -252,6 +252,15 @@
                     <p class="text-slate-500 text-sm">Contrato registrado oficialmente.</p>
                 </a>
 
+                <!-- Política de Gestión de Tráfico -->
+                <a href="politica-gestion-trafico.php" class="group bg-bglight hover:bg-white rounded-2xl p-6 border border-slate-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all">
+                    <div class="w-12 h-12 bg-white group-hover:bg-primary/10 rounded-xl flex items-center justify-center mb-4 transition-colors">
+                        <i data-lucide="activity" class="text-primary w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary mb-2 group-hover:text-primary transition-colors">Política de Gestión de Tráfico</h3>
+                    <p class="text-slate-500 text-sm">Lineamientos de administración de red.</p>
+                </a>
+
                 <!-- Tarifas Registradas ante IFETEL -->
                 <!-- <a href="legal/TarifasRegistradasanteIFETEL.pdf" target="_blank" class="group bg-bglight hover:bg-white rounded-2xl p-6 border border-slate-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all">
                     <div class="w-12 h-12 bg-white group-hover:bg-primary/10 rounded-xl flex items-center justify-center mb-4 transition-colors">
