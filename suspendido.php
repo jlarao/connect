@@ -52,37 +52,38 @@
         body {
             background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95) 0%, #0f172a 60%);
         }
+
+        .product-card:hover .product-image {
+            transform: scale(1.08);
+        }
+
+        .product-image {
+            transition: transform 0.4s ease;
+        }
     </style>
 </head>
-<body class="font-sans text-slate-200 antialiased min-h-screen px-6 py-16">
+<body class="font-sans text-slate-200 antialiased min-h-screen px-6 py-10">
 
-    <div class="max-w-5xl mx-auto flex flex-col items-center gap-16">
+    <!-- Logo -->
+    <a href="index.php" class="fixed top-4 left-4 z-20 flex items-center gap-2 group">
+        <img src="logo/logo.jpeg" alt="ConectateYa Logo" class="h-9 w-auto rounded-lg shadow-md group-hover:scale-105 transition-transform">
+    </a>
+
+    <div class="max-w-5xl mx-auto flex flex-col items-center gap-14 pt-8">
 
         <div class="max-w-lg w-full text-center">
-            <img src="logo/logo.jpeg" alt="ConectateYa Logo" class="h-16 w-auto mx-auto rounded-2xl shadow-xl mb-8">
-
-            <div class="bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-md">
-                <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md">
+                <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
                     <i data-lucide="wifi-off" class="text-red-400 w-8 h-8"></i>
                 </div>
 
-                <h1 class="text-3xl font-bold text-white mb-4">Servicio Suspendido</h1>
-
-                <p class="text-slate-400 leading-relaxed mb-8">
-                    Tu servicio de internet se encuentra temporalmente suspendido. Esto suele deberse a un pago pendiente.
-                    Regulariza tu situación con nosotros para reactivar tu conexión.
-                </p>
+                <h1 class="text-3xl font-bold text-white mb-6">Servicio Suspendido</h1>
 
                 <a href="http://192.168.70.1/login.html?from=conectateya"
                    class="inline-flex items-center justify-center gap-2 w-full bg-primary hover:bg-opacity-90 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">
                     <i data-lucide="log-in" class="w-5 h-5"></i>
                     Iniciar Sesión
                 </a>
-
-                <p class="text-slate-500 text-sm mt-8">
-                    ¿Necesitas ayuda? Escríbenos por
-                    <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>" class="text-primary hover:underline">WhatsApp</a>.
-                </p>
             </div>
         </div>
 
@@ -103,27 +104,30 @@
                         'nombre' => 'Router TP-Link',
                         'descripcion' => '¿Se te va la señal en algunos cuartos? Extiende tu red WiFi y llega hasta el último rincón de tu casa. Aprovecha esta oferta y adquiérelo hoy.',
                         'precio' => '$250',
+                        'precio_original' => '$300',
                         'imagen' => 'assets/images/productos/tplink-router.jpg',
                     ],
                     [
                         'nombre' => 'POE 24V Ubiquiti',
                         'descripcion' => '¿Tu antena o router Ubiquiti dejó de dar internet? Antes de pensar en cambiar el equipo completo, revisa el POE, es lo que más se quema por variaciones de luz. Ten uno de repuesto y resuelve la falla en minutos.',
                         'precio' => '$200',
+                        'precio_original' => '$260',
                         'imagen' => 'assets/images/productos/poe-24v-ubnt.webp',
                     ],
                     [
                         'nombre' => 'LiteBeam 5AC',
                         'descripcion' => '¿Tu negocio o casa está lejos del router? Lleva tu internet hasta 2 km de distancia sin cables, con la misma velocidad y estabilidad. Ideal para talleres, bodegas o casas alejadas.',
                         'precio' => '$2,000',
+                        'precio_original' => '$2,300',
                         'imagen' => 'assets/images/productos/litebeam-5ac.webp',
                     ],
                 ];
                 ?>
                 <?php foreach ($productos as $producto): ?>
-                <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-primary/40 transition-all">
-                    <div class="relative aspect-square bg-white/5">
+                <div class="product-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300">
+                    <div class="relative aspect-square bg-white/5 overflow-hidden">
                         <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>"
-                             class="w-full h-full object-cover" loading="lazy">
+                             class="product-image w-full h-full object-cover" loading="lazy">
                         <span class="absolute top-3 left-3 bg-primary text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
                             Oferta
                         </span>
@@ -132,7 +136,10 @@
                         <h3 class="text-lg font-bold text-white mb-2"><?php echo $producto['nombre']; ?></h3>
                         <p class="text-slate-400 text-sm mb-4 leading-relaxed"><?php echo $producto['descripcion']; ?></p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-black text-primary"><?php echo $producto['precio']; ?></span>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-slate-500 text-sm line-through"><?php echo $producto['precio_original']; ?></span>
+                                <span class="text-2xl font-black text-primary"><?php echo $producto['precio']; ?></span>
+                            </div>
                             <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>?text=<?php echo urlencode('Hola, me interesa el producto: ' . $producto['nombre']); ?>"
                                class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-primary text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-all">
                                 <i data-lucide="message-circle" class="w-4 h-4"></i>
@@ -146,6 +153,14 @@
         </div>
 
     </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>?text=<?php echo urlencode(WHATSAPP_MESSAGE); ?>"
+       class="fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white p-5 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all group overflow-hidden"
+       target="_blank">
+        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
+        <i data-lucide="message-circle" class="relative z-10 w-8 h-8"></i>
+    </a>
 
     <script>
         lucide.createIcons();
