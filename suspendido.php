@@ -213,9 +213,19 @@
             });
         }
 
-        document.getElementById('carousel-prev').addEventListener('click', () => goTo(current - 1));
-        document.getElementById('carousel-next').addEventListener('click', () => goTo(current + 1));
-        dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+        // Autoplay: cambia de producto cada 5 segundos
+        let autoplayInterval;
+        function startAutoplay() {
+            autoplayInterval = setInterval(() => goTo(current + 1), 5000);
+        }
+        function resetAutoplay() {
+            clearInterval(autoplayInterval);
+            startAutoplay();
+        }
+
+        document.getElementById('carousel-prev').addEventListener('click', () => { goTo(current - 1); resetAutoplay(); });
+        document.getElementById('carousel-next').addEventListener('click', () => { goTo(current + 1); resetAutoplay(); });
+        dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); resetAutoplay(); }));
 
         // Swipe táctil
         let touchStartX = 0;
@@ -224,11 +234,12 @@
         }, { passive: true });
         slides.addEventListener('touchend', (e) => {
             const delta = e.changedTouches[0].clientX - touchStartX;
-            if (delta > 40) goTo(current - 1);
-            else if (delta < -40) goTo(current + 1);
+            if (delta > 40) { goTo(current - 1); resetAutoplay(); }
+            else if (delta < -40) { goTo(current + 1); resetAutoplay(); }
         }, { passive: true });
 
         goTo(0);
+        startAutoplay();
 
         // Countdown y aviso de suspensión
         let secondsLeft = 15;
