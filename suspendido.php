@@ -142,7 +142,7 @@
                             <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>"
                                  class="product-image w-full h-full object-cover" loading="lazy">
                             <span class="absolute top-3 left-3 bg-primary text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
-                                Oferta
+                                Oferta <?php echo $producto['precio']; ?>
                             </span>
                         </div>
                         <div class="p-6">
