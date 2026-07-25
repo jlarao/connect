@@ -79,11 +79,13 @@
 
                 <h1 class="text-3xl font-bold text-white mb-6">Servicio Suspendido</h1>
 
-                <a href="http://192.168.70.1/login.html?from=conectateya"
-                   class="inline-flex items-center justify-center gap-2 w-full bg-primary hover:bg-opacity-90 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">
-                    <i data-lucide="log-in" class="w-5 h-5"></i>
-                    Iniciar Sesión
-                </a>
+                <div class="text-left">
+                    <a href="http://192.168.70.1/login.html?from=conectateya"
+                       class="inline-flex items-center gap-1.5 text-slate-400 hover:text-primary text-sm font-medium transition-colors">
+                        <i data-lucide="log-in" class="w-3.5 h-3.5"></i>
+                        Iniciar sesión
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -97,7 +99,9 @@
                 <h2 class="text-2xl lg:text-3xl font-bold text-white">Mientras tanto, mejora tu red</h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="relative max-w-md mx-auto">
+                <div id="carousel-track" class="overflow-hidden rounded-3xl">
+                    <div id="carousel-slides" class="flex transition-transform duration-500 ease-out">
                 <?php
                 $productos = [
                     [
@@ -124,31 +128,52 @@
                 ];
                 ?>
                 <?php foreach ($productos as $producto): ?>
-                <div class="product-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300">
-                    <div class="relative aspect-square bg-white/5 overflow-hidden">
-                        <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>"
-                             class="product-image w-full h-full object-cover" loading="lazy">
-                        <span class="absolute top-3 left-3 bg-primary text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
-                            Oferta
-                        </span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2"><?php echo $producto['nombre']; ?></h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed"><?php echo $producto['descripcion']; ?></p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-baseline gap-2">
-                                <span class="text-slate-500 text-sm line-through"><?php echo $producto['precio_original']; ?></span>
-                                <span class="text-2xl font-black text-primary"><?php echo $producto['precio']; ?></span>
+                <div class="carousel-slide w-full shrink-0 px-1">
+                    <div class="product-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300">
+                        <div class="relative aspect-square bg-white/5 overflow-hidden">
+                            <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>"
+                                 class="product-image w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-3 left-3 bg-primary text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                                Oferta
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white mb-2"><?php echo $producto['nombre']; ?></h3>
+                            <p class="text-slate-400 text-sm mb-4 leading-relaxed"><?php echo $producto['descripcion']; ?></p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-slate-500 text-sm line-through"><?php echo $producto['precio_original']; ?></span>
+                                    <span class="text-2xl font-black text-primary"><?php echo $producto['precio']; ?></span>
+                                </div>
+                                <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>?text=<?php echo urlencode('Hola, me interesa el producto: ' . $producto['nombre']); ?>"
+                                   class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-primary text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-all">
+                                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                    Pedir
+                                </a>
                             </div>
-                            <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>?text=<?php echo urlencode('Hola, me interesa el producto: ' . $producto['nombre']); ?>"
-                               class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-primary text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-all">
-                                <i data-lucide="message-circle" class="w-4 h-4"></i>
-                                Pedir
-                            </a>
                         </div>
                     </div>
                 </div>
                 <?php endforeach; ?>
+                    </div>
+                </div>
+
+                <!-- Arrows -->
+                <button id="carousel-prev" aria-label="Anterior"
+                        class="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-14 bg-white/10 hover:bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors shadow-lg backdrop-blur-md">
+                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                </button>
+                <button id="carousel-next" aria-label="Siguiente"
+                        class="absolute top-1/2 -translate-y-1/2 -right-4 md:-right-14 bg-white/10 hover:bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors shadow-lg backdrop-blur-md">
+                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </button>
+
+                <!-- Dots -->
+                <div id="carousel-dots" class="flex items-center justify-center gap-2 mt-6">
+                    <?php foreach ($productos as $i => $producto): ?>
+                    <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/20 transition-colors" data-index="<?php echo $i; ?>"></button>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
 
@@ -164,6 +189,27 @@
 
     <script>
         lucide.createIcons();
+
+        // Carousel de ofertas
+        const slides = document.getElementById('carousel-slides');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const total = document.querySelectorAll('.carousel-slide').length;
+        let current = 0;
+
+        function goTo(index) {
+            current = (index + total) % total;
+            slides.style.transform = `translateX(-${current * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('bg-primary', i === current);
+                dot.classList.toggle('bg-white/20', i !== current);
+            });
+        }
+
+        document.getElementById('carousel-prev').addEventListener('click', () => goTo(current - 1));
+        document.getElementById('carousel-next').addEventListener('click', () => goTo(current + 1));
+        dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+        goTo(0);
     </script>
 </body>
 </html>
