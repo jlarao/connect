@@ -73,7 +73,19 @@
         <img src="logo/logo.jpeg" alt="ConectateYa Logo" class="h-8 sm:h-9 w-auto rounded-lg shadow-md group-hover:scale-105 transition-transform">
     </a>
 
+    <!-- Iniciar sesión -->
+    <a href="http://192.168.70.1/login.html?from=conectateya"
+       class="fixed top-3 right-3 sm:top-4 sm:right-4 z-20 inline-flex items-center gap-1.5 text-slate-400 hover:text-primary text-xs sm:text-sm font-medium transition-colors">
+        <i data-lucide="log-in" class="w-3.5 h-3.5"></i>
+        Iniciar sesión
+    </a>
+
     <div class="max-w-5xl mx-auto flex flex-col items-center gap-10 sm:gap-14 pt-10 sm:pt-8">
+
+        <div id="countdown-timer" class="flex items-center justify-center gap-2 text-xs sm:text-sm text-amber-400 bg-amber-400/10 border border-amber-400/20 rounded-full px-4 py-2 transition-opacity duration-500">
+            <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+            Aviso de suspensión en <span id="countdown-number" class="font-bold">15</span>s
+        </div>
 
         <div id="suspended-notice" class="max-w-lg w-full min-w-0 text-center hidden opacity-0 -translate-y-4 transition-all duration-700 ease-out">
             <div class="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
@@ -81,15 +93,7 @@
                     <i data-lucide="wifi-off" class="text-red-400 w-7 h-7 sm:w-8 sm:h-8"></i>
                 </div>
 
-                <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6 break-words">Servicio Suspendido</h1>
-
-                <div class="text-left">
-                    <a href="http://192.168.70.1/login.html?from=conectateya"
-                       class="inline-flex items-center gap-1.5 text-slate-400 hover:text-primary text-sm font-medium transition-colors">
-                        <i data-lucide="log-in" class="w-3.5 h-3.5"></i>
-                        Iniciar sesión
-                    </a>
-                </div>
+                <h1 class="text-2xl sm:text-3xl font-bold text-white break-words">Servicio Suspendido</h1>
             </div>
         </div>
 
@@ -226,17 +230,31 @@
 
         goTo(0);
 
-        // Mostrar el aviso de suspensión después de 15 segundos
-        setTimeout(() => {
-            const notice = document.getElementById('suspended-notice');
-            notice.classList.remove('hidden');
-            requestAnimationFrame(() => {
+        // Countdown y aviso de suspensión
+        let secondsLeft = 15;
+        const countdownTimer = document.getElementById('countdown-timer');
+        const countdownNumber = document.getElementById('countdown-number');
+
+        const countdownInterval = setInterval(() => {
+            secondsLeft--;
+            countdownNumber.textContent = secondsLeft;
+
+            if (secondsLeft <= 0) {
+                clearInterval(countdownInterval);
+
+                countdownTimer.classList.add('opacity-0');
+                setTimeout(() => countdownTimer.remove(), 500);
+
+                const notice = document.getElementById('suspended-notice');
+                notice.classList.remove('hidden');
                 requestAnimationFrame(() => {
-                    notice.classList.remove('opacity-0', '-translate-y-4');
-                    notice.classList.add('opacity-100', 'translate-y-0');
+                    requestAnimationFrame(() => {
+                        notice.classList.remove('opacity-0', '-translate-y-4');
+                        notice.classList.add('opacity-100', 'translate-y-0');
+                    });
                 });
-            });
-        }, 15000);
+            }
+        }, 1000);
     </script>
 </body>
 </html>
