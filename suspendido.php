@@ -49,6 +49,10 @@
     </script>
 
     <style>
+        html, body {
+            overflow-x: hidden;
+        }
+
         body {
             background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95) 0%, #0f172a 60%);
         }
@@ -62,22 +66,22 @@
         }
     </style>
 </head>
-<body class="font-sans text-slate-200 antialiased min-h-screen px-6 py-10">
+<body class="font-sans text-slate-200 antialiased min-h-screen px-4 sm:px-6 py-8 sm:py-10">
 
     <!-- Logo -->
-    <a href="index.php" class="fixed top-4 left-4 z-20 flex items-center gap-2 group">
-        <img src="logo/logo.jpeg" alt="ConectateYa Logo" class="h-9 w-auto rounded-lg shadow-md group-hover:scale-105 transition-transform">
+    <a href="index.php" class="fixed top-3 left-3 sm:top-4 sm:left-4 z-20 flex items-center gap-2 group">
+        <img src="logo/logo.jpeg" alt="ConectateYa Logo" class="h-8 sm:h-9 w-auto rounded-lg shadow-md group-hover:scale-105 transition-transform">
     </a>
 
-    <div class="max-w-5xl mx-auto flex flex-col items-center gap-14 pt-8">
+    <div class="max-w-5xl mx-auto flex flex-col items-center gap-10 sm:gap-14 pt-10 sm:pt-8">
 
-        <div class="max-w-lg w-full text-center">
-            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md">
-                <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
-                    <i data-lucide="wifi-off" class="text-red-400 w-8 h-8"></i>
+        <div id="suspended-notice" class="max-w-lg w-full min-w-0 text-center hidden opacity-0 -translate-y-4 transition-all duration-700 ease-out">
+            <div class="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-5">
+                    <i data-lucide="wifi-off" class="text-red-400 w-7 h-7 sm:w-8 sm:h-8"></i>
                 </div>
 
-                <h1 class="text-3xl font-bold text-white mb-6">Servicio Suspendido</h1>
+                <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6 break-words">Servicio Suspendido</h1>
 
                 <div class="text-left">
                     <a href="http://192.168.70.1/login.html?from=conectateya"
@@ -90,16 +94,16 @@
         </div>
 
         <!-- Ofertas Banner -->
-        <div class="w-full">
-            <div class="text-center mb-10">
+        <div class="w-full min-w-0">
+            <div class="text-center mb-8 sm:mb-10 px-2">
                 <span class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
                     <i data-lucide="tag" class="w-3.5 h-3.5"></i>
                     Ofertas del mes
                 </span>
-                <h2 class="text-2xl lg:text-3xl font-bold text-white">Mientras tanto, mejora tu red</h2>
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white">Mientras tanto, mejora tu red</h2>
             </div>
 
-            <div class="relative max-w-md mx-auto">
+            <div class="relative max-w-md mx-auto px-8 md:px-0">
                 <div id="carousel-track" class="overflow-hidden rounded-3xl">
                     <div id="carousel-slides" class="flex transition-transform duration-500 ease-out">
                 <?php
@@ -160,11 +164,11 @@
 
                 <!-- Arrows -->
                 <button id="carousel-prev" aria-label="Anterior"
-                        class="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-14 bg-white/10 hover:bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors shadow-lg backdrop-blur-md">
+                        class="absolute top-1/2 -translate-y-1/2 left-0 md:-left-14 bg-white/10 hover:bg-primary text-white w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-colors shadow-lg backdrop-blur-md">
                     <i data-lucide="chevron-left" class="w-5 h-5"></i>
                 </button>
                 <button id="carousel-next" aria-label="Siguiente"
-                        class="absolute top-1/2 -translate-y-1/2 -right-4 md:-right-14 bg-white/10 hover:bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors shadow-lg backdrop-blur-md">
+                        class="absolute top-1/2 -translate-y-1/2 right-0 md:-right-14 bg-white/10 hover:bg-primary text-white w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-colors shadow-lg backdrop-blur-md">
                     <i data-lucide="chevron-right" class="w-5 h-5"></i>
                 </button>
 
@@ -181,10 +185,10 @@
 
     <!-- Floating WhatsApp -->
     <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>?text=<?php echo urlencode(WHATSAPP_MESSAGE); ?>"
-       class="fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white p-5 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all group overflow-hidden"
+       class="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-[60] bg-[#25D366] text-white p-4 sm:p-5 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all group overflow-hidden"
        target="_blank">
         <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
-        <i data-lucide="message-circle" class="relative z-10 w-8 h-8"></i>
+        <i data-lucide="message-circle" class="relative z-10 w-6 h-6 sm:w-8 sm:h-8"></i>
     </a>
 
     <script>
@@ -209,7 +213,30 @@
         document.getElementById('carousel-next').addEventListener('click', () => goTo(current + 1));
         dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
 
+        // Swipe táctil
+        let touchStartX = 0;
+        slides.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+        slides.addEventListener('touchend', (e) => {
+            const delta = e.changedTouches[0].clientX - touchStartX;
+            if (delta > 40) goTo(current - 1);
+            else if (delta < -40) goTo(current + 1);
+        }, { passive: true });
+
         goTo(0);
+
+        // Mostrar el aviso de suspensión después de 15 segundos
+        setTimeout(() => {
+            const notice = document.getElementById('suspended-notice');
+            notice.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    notice.classList.remove('opacity-0', '-translate-y-4');
+                    notice.classList.add('opacity-100', 'translate-y-0');
+                });
+            });
+        }, 15000);
     </script>
 </body>
 </html>
