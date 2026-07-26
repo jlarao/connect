@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicio Suspendido | <?php echo SITE_NAME; ?></title>
-    <meta name="robots" content="noindex, nofollow">
+    <title>Router TP-Link, POE Ubiquiti, LiteBeam 5AC | <?php echo SITE_NAME; ?></title>
+    <meta name="description" content="Compra router rompemuros TP-Link, POE 24V Ubiquiti o antena LiteBeam 5AC a precio de oferta. Envío rápido y atención por WhatsApp.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="logo/logo.jpeg">
@@ -114,41 +114,84 @@
                 $productos = [
                     [
                         'nombre' => 'Router TP-Link',
-                        'titulo' => 'Se Acabó el WiFi que No Llega',
-                        'descripcion' => '¿Hay un cuarto de tu casa donde el WiFi muere? Este router extiende tu señal a cada rincón hoy mismo, sin técnico ni instalación complicada. Quedan pocas unidades a este precio.',
-                        'cta' => 'Quiero mi Router Ya',
+                        'marca' => 'TP-Link',
+                        'slug' => 'router-rompemuros-tplink',
+                        'titulo' => 'Router Rompemuros TP-Link: Extiende tu Señal WiFi',
+                        'descripcion' => 'Router rompemuros TP-Link a precio de oferta: elimina zonas muertas de WiFi y mejora la señal de internet en toda tu casa. Fácil instalación.',
+                        'alt' => 'Router rompemuros TP-Link para extender señal WiFi en casa, precio de oferta',
+                        'cta' => 'Comprar Router TP-Link con Descuento',
                         'precio' => '$250',
                         'precio_original' => '$300',
+                        'precio_numero' => '250.00',
                         'ahorro' => '$50',
                         'imagen' => 'assets/images/productos/tplink-router.jpg',
                     ],
                     [
                         'nombre' => 'POE 24V Ubiquiti',
-                        'titulo' => '¿Sin Internet? Puede Ser Solo el POE',
-                        'descripcion' => 'El 90% de las fallas en antenas Ubiquiti no es el equipo: es el POE quemado por variaciones de luz. Ten uno de repuesto y resuelve la falla tú mismo en minutos. Stock limitado esta semana.',
-                        'cta' => 'Resolver mi Falla Ahora',
+                        'marca' => 'Ubiquiti',
+                        'slug' => 'poe-24v-ubiquiti',
+                        'titulo' => 'Inyector POE 24V Ubiquiti (POE-24-12W-G): Repuesto en Oferta',
+                        'descripcion' => 'Inyector POE 24V Ubiquiti (POE-24-12W-G) a precio de oferta: fuente de alimentación de repuesto ideal si tu router o antena dejó de dar internet.',
+                        'alt' => 'Inyector POE 24V Ubiquiti POE-24-12W-G, fuente de alimentación de repuesto',
+                        'cta' => 'Comprar POE 24V Ubiquiti de Repuesto',
                         'precio' => '$200',
                         'precio_original' => '$260',
+                        'precio_numero' => '200.00',
                         'ahorro' => '$60',
                         'imagen' => 'assets/images/productos/poe-24v-ubnt.webp',
                     ],
                     [
                         'nombre' => 'LiteBeam 5AC',
-                        'titulo' => 'Internet a 2 km, Sin Cables ni Excusas',
-                        'descripcion' => '¿Tu negocio o casa está fuera del alcance del router? Este enlace lleva tu conexión hasta 2 km con la misma velocidad y estabilidad. Precio de oferta válido solo por tiempo limitado.',
-                        'cta' => 'Conectar mi Negocio Hoy',
+                        'marca' => 'Ubiquiti',
+                        'slug' => 'litebeam-5ac-ubiquiti',
+                        'titulo' => 'LiteBeam 5AC Ubiquiti: Enlace Inalámbrico hasta 2 km',
+                        'descripcion' => 'LiteBeam 5AC Ubiquiti a precio de oferta: enlace inalámbrico de hasta 2 km sin cables, ideal para llevar internet a talleres o bodegas alejadas.',
+                        'alt' => 'Antena LiteBeam 5AC Ubiquiti para enlace inalámbrico de internet a 2 km de distancia',
+                        'cta' => 'Comprar LiteBeam 5AC Ubiquiti',
                         'precio' => '$2,000',
                         'precio_original' => '$2,300',
+                        'precio_numero' => '2000.00',
                         'ahorro' => '$300',
                         'imagen' => 'assets/images/productos/litebeam-5ac.webp',
                     ],
                 ];
+
+                // Datos estructurados (Product/ItemList) para carrusel de Google
+                $itemListElements = [];
+                foreach ($productos as $i => $p) {
+                    $itemListElements[] = [
+                        '@type' => 'ListItem',
+                        'position' => $i + 1,
+                        'item' => [
+                            '@type' => 'Product',
+                            'name' => $p['nombre'],
+                            'image' => rtrim(SITE_URL, '/') . '/' . $p['imagen'],
+                            'description' => $p['descripcion'],
+                            'brand' => ['@type' => 'Brand', 'name' => $p['marca']],
+                            'offers' => [
+                                '@type' => 'Offer',
+                                'url' => rtrim(SITE_URL, '/') . '/suspendido.php#' . $p['slug'],
+                                'priceCurrency' => 'MXN',
+                                'price' => $p['precio_numero'],
+                                'availability' => 'https://schema.org/InStock',
+                            ],
+                        ],
+                    ];
+                }
+                $productListSchema = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'ItemList',
+                    'itemListElement' => $itemListElements,
+                ];
                 ?>
+                <script type="application/ld+json">
+                <?php echo json_encode($productListSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>
+                </script>
                 <?php foreach ($productos as $producto): ?>
-                <div class="carousel-slide w-full shrink-0 px-1">
+                <div class="carousel-slide w-full shrink-0 px-1" id="<?php echo $producto['slug']; ?>">
                     <div class="product-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300">
                         <div class="relative aspect-square bg-white/5 overflow-hidden">
-                            <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>"
+                            <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['alt']; ?>"
                                  class="product-image w-full h-full object-cover" loading="lazy">
                             <span class="absolute top-3 left-3 bg-[#FF3B30] text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-lg shadow-[#FF3B30]/40">
                                 Ahorras <?php echo $producto['ahorro']; ?>
