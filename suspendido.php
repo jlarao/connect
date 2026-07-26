@@ -114,21 +114,27 @@
                 $productos = [
                     [
                         'nombre' => 'Router TP-Link',
-                        'descripcion' => '¿Se te va la señal en algunos cuartos? Extiende tu red WiFi y llega hasta el último rincón de tu casa. Aprovecha esta oferta y adquiérelo hoy.',
+                        'titulo' => 'Adiós a los Puntos Ciegos de WiFi',
+                        'descripcion' => '¿Hay cuartos de tu casa donde el WiFi simplemente no llega? Este router extiende tu señal a cada rincón en minutos, sin necesidad de técnico. Quedan pocas piezas en oferta esta semana.',
+                        'cta' => 'Quiero Cobertura Total',
                         'precio' => '$250',
                         'precio_original' => '$300',
                         'imagen' => 'assets/images/productos/tplink-router.jpg',
                     ],
                     [
                         'nombre' => 'POE 24V Ubiquiti',
-                        'descripcion' => '¿Tu antena o router Ubiquiti dejó de dar internet? Antes de pensar en cambiar el equipo completo, revisa el POE, es lo que más se quema por variaciones de luz. Ten uno de repuesto y resuelve la falla en minutos.',
+                        'titulo' => '¿Sin Internet? Puede Ser Solo el POE',
+                        'descripcion' => 'El 90% de las fallas en antenas Ubiquiti no es el equipo, es el POE quemado por variaciones de luz. Ten uno de repuesto y resuelve la falla tú mismo en minutos. Stock limitado, se agota rápido.',
+                        'cta' => 'Solucionar mi Falla Ahora',
                         'precio' => '$200',
                         'precio_original' => '$260',
                         'imagen' => 'assets/images/productos/poe-24v-ubnt.webp',
                     ],
                     [
                         'nombre' => 'LiteBeam 5AC',
-                        'descripcion' => '¿Tu negocio o casa está lejos del router? Lleva tu internet hasta 2 km de distancia sin cables, con la misma velocidad y estabilidad. Ideal para talleres, bodegas o casas alejadas.',
+                        'titulo' => 'Internet a 2 km, Sin Cables ni Excusas',
+                        'descripcion' => '¿Tu negocio, bodega o casa está fuera del alcance del router? Este enlace lleva tu conexión hasta 2 km de distancia con la misma velocidad y estabilidad. Oferta válida solo por tiempo limitado.',
+                        'cta' => 'Conectar mi Negocio Hoy',
                         'precio' => '$2,000',
                         'precio_original' => '$2,300',
                         'imagen' => 'assets/images/productos/litebeam-5ac.webp',
@@ -146,17 +152,17 @@
                             </span>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-lg font-bold text-white mb-2"><?php echo $producto['nombre']; ?></h3>
+                            <h3 class="text-lg font-bold text-white mb-2"><?php echo $producto['titulo']; ?></h3>
                             <p class="text-slate-400 text-sm mb-4 leading-relaxed"><?php echo $producto['descripcion']; ?></p>
-                            <div class="flex items-center justify-between">
+                            <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                                 <div class="flex items-baseline gap-2">
                                     <span class="text-slate-500 text-sm line-through"><?php echo $producto['precio_original']; ?></span>
                                     <span class="text-2xl font-black text-primary"><?php echo $producto['precio']; ?></span>
                                 </div>
                                 <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>?text=<?php echo urlencode('Hola, me interesa el producto: ' . $producto['nombre']); ?>"
-                                   class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-primary text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-all">
-                                    <i data-lucide="message-circle" class="w-4 h-4"></i>
-                                    Pedir
+                                   class="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto bg-white/10 hover:bg-primary text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-all whitespace-nowrap">
+                                    <i data-lucide="message-circle" class="w-4 h-4 shrink-0"></i>
+                                    <?php echo $producto['cta']; ?>
                                 </a>
                             </div>
                         </div>
