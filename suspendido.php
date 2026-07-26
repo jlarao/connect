@@ -114,29 +114,32 @@
                 $productos = [
                     [
                         'nombre' => 'Router TP-Link',
-                        'titulo' => 'Adiós a los Puntos Ciegos de WiFi',
-                        'descripcion' => '¿Hay cuartos de tu casa donde el WiFi simplemente no llega? Este router extiende tu señal a cada rincón en minutos, sin necesidad de técnico. Quedan pocas piezas en oferta esta semana.',
-                        'cta' => 'Quiero Cobertura Total',
+                        'titulo' => 'Se Acabó el WiFi que No Llega',
+                        'descripcion' => '¿Hay un cuarto de tu casa donde el WiFi muere? Este router extiende tu señal a cada rincón hoy mismo, sin técnico ni instalación complicada. Quedan pocas unidades a este precio.',
+                        'cta' => 'Quiero mi Router Ya',
                         'precio' => '$250',
                         'precio_original' => '$300',
+                        'ahorro' => '$50',
                         'imagen' => 'assets/images/productos/tplink-router.jpg',
                     ],
                     [
                         'nombre' => 'POE 24V Ubiquiti',
                         'titulo' => '¿Sin Internet? Puede Ser Solo el POE',
-                        'descripcion' => 'El 90% de las fallas en antenas Ubiquiti no es el equipo, es el POE quemado por variaciones de luz. Ten uno de repuesto y resuelve la falla tú mismo en minutos. Stock limitado, se agota rápido.',
-                        'cta' => 'Solucionar mi Falla Ahora',
+                        'descripcion' => 'El 90% de las fallas en antenas Ubiquiti no es el equipo: es el POE quemado por variaciones de luz. Ten uno de repuesto y resuelve la falla tú mismo en minutos. Stock limitado esta semana.',
+                        'cta' => 'Resolver mi Falla Ahora',
                         'precio' => '$200',
                         'precio_original' => '$260',
+                        'ahorro' => '$60',
                         'imagen' => 'assets/images/productos/poe-24v-ubnt.webp',
                     ],
                     [
                         'nombre' => 'LiteBeam 5AC',
                         'titulo' => 'Internet a 2 km, Sin Cables ni Excusas',
-                        'descripcion' => '¿Tu negocio, bodega o casa está fuera del alcance del router? Este enlace lleva tu conexión hasta 2 km de distancia con la misma velocidad y estabilidad. Oferta válida solo por tiempo limitado.',
+                        'descripcion' => '¿Tu negocio o casa está fuera del alcance del router? Este enlace lleva tu conexión hasta 2 km con la misma velocidad y estabilidad. Precio de oferta válido solo por tiempo limitado.',
                         'cta' => 'Conectar mi Negocio Hoy',
                         'precio' => '$2,000',
                         'precio_original' => '$2,300',
+                        'ahorro' => '$300',
                         'imagen' => 'assets/images/productos/litebeam-5ac.webp',
                     ],
                 ];
@@ -147,8 +150,8 @@
                         <div class="relative aspect-square bg-white/5 overflow-hidden">
                             <img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>"
                                  class="product-image w-full h-full object-cover" loading="lazy">
-                            <span class="absolute top-3 left-3 bg-primary text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
-                                Oferta <?php echo $producto['precio']; ?>
+                            <span class="absolute top-3 left-3 bg-[#FF3B30] text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-lg shadow-[#FF3B30]/40">
+                                Ahorras <?php echo $producto['ahorro']; ?>
                             </span>
                         </div>
                         <div class="p-6">
@@ -160,7 +163,7 @@
                                     <span class="text-2xl font-black text-primary"><?php echo $producto['precio']; ?></span>
                                 </div>
                                 <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>?text=<?php echo urlencode('Hola, me interesa el producto: ' . $producto['nombre']); ?>"
-                                   class="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto bg-white/10 hover:bg-primary text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-all whitespace-nowrap">
+                                   class="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto bg-[#25D366] hover:bg-[#1ebe5d] text-white text-sm font-bold px-4 py-2.5 rounded-xl shadow-lg shadow-[#25D366]/30 hover:scale-[1.03] active:scale-95 transition-all whitespace-nowrap">
                                     <i data-lucide="message-circle" class="w-4 h-4 shrink-0"></i>
                                     <?php echo $producto['cta']; ?>
                                 </a>
