@@ -38,7 +38,7 @@ class PppoeController
             $api = new RouterosAPI();
             $datos = new StdClass();
 
-            if ($api->connect(HOST_MKT, 'admin', 'PinoSuar')) {
+            if ($api->connect(HOST_MKT, MIKROTIK_USER, MIKROTIK_PASS)) {
 
                 $ARRAY = $api->comm("/ppp/secret/add", array(
                     "name" => strtoupper($data['name']),

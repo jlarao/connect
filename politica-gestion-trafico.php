@@ -1,4 +1,8 @@
-<?php include 'includes/header.php'; ?>
+<?php
+$pageTitle = 'Política de Gestión de Tráfico | ConectateYa';
+$pageDescription = 'Código de Política de Gestión de Tráfico y Administración de Red de ConectateYa en Durango, Dgo.';
+include 'includes/header.php';
+?>
 
 <!-- Legal Hero Section -->
 <section class="relative pt-32 pb-16 overflow-hidden">

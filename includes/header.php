@@ -1,12 +1,67 @@
 <?php require_once 'config.php'; ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo META_TITLE; ?></title>
-    <meta name="description" content="<?php echo META_DESCRIPTION; ?>">
-    
+    <?php
+    $pageTitle = $pageTitle ?? META_TITLE;
+    $pageDescription = $pageDescription ?? META_DESCRIPTION;
+    $pageUrl = rtrim(SITE_URL, '/') . strtok($_SERVER['REQUEST_URI'], '?');
+    $pageImage = rtrim(SITE_URL, '/') . '/assets/images/hero-fiber.jpg';
+    ?>
+    <title><?php echo $pageTitle; ?></title>
+    <meta name="description" content="<?php echo $pageDescription; ?>">
+    <link rel="canonical" href="<?php echo $pageUrl; ?>">
+
+    <!-- Open Graph / Twitter Card -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="<?php echo SITE_NAME; ?>">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:url" content="<?php echo $pageUrl; ?>">
+    <meta property="og:title" content="<?php echo $pageTitle; ?>">
+    <meta property="og:description" content="<?php echo $pageDescription; ?>">
+    <meta property="og:image" content="<?php echo $pageImage; ?>">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo $pageTitle; ?>">
+    <meta name="twitter:description" content="<?php echo $pageDescription; ?>">
+    <meta name="twitter:image" content="<?php echo $pageImage; ?>">
+
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ConectateYa",
+        "url": "<?php echo rtrim(SITE_URL, '/'); ?>/",
+        "logo": "<?php echo rtrim(SITE_URL, '/'); ?>/logo/logo.jpeg",
+        "image": "<?php echo rtrim(SITE_URL, '/'); ?>/logo/logo.jpeg",
+        "email": "<?php echo CONTACT_EMAIL; ?>",
+        "telephone": "<?php echo WHATSAPP_NUMBER; ?>",
+        "priceRange": "$350 - $500 MXN",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "<?php echo BUSINESS_ADDRESS_LOCALITY; ?>",
+            "addressRegion": "<?php echo BUSINESS_STATE; ?>",
+            "postalCode": "<?php echo BUSINESS_POSTAL_CODE; ?>",
+            "addressCountry": "<?php echo BUSINESS_COUNTRY; ?>"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "<?php echo BUSINESS_CITY; ?>, <?php echo BUSINESS_STATE; ?>"
+        },
+        "sameAs": [
+            "https://www.facebook.com/zona.net.378/"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "<?php echo WHATSAPP_NUMBER; ?>",
+            "contactType": "sales",
+            "email": "<?php echo CONTACT_EMAIL; ?>"
+        }
+    }
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="logo/logo.jpeg">
     <link rel="apple-touch-icon" href="logo/logo.jpeg">
@@ -27,8 +82,7 @@
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -50,12 +104,7 @@
         }
     </script>
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
-        
         .glass-nav {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
@@ -120,7 +169,6 @@
     <div id="mobile-menu" class="fixed inset-0 z-[45] bg-secondary/95 backdrop-blur-xl translate-x-full transition-transform duration-500 flex flex-col items-center justify-center gap-8 md:hidden">
         <a href="index.php#inicio" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Inicio</a>
         <a href="index.php#planes" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Planes</a>
-        <a href="index.php#beneficios" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Beneficios</a>
         <a href="index.php#contacto" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Contacto</a>
         <a href="legal.php" class="text-white text-3xl font-bold hover:text-primary transition-colors mobile-link">Legal</a>
         <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>" class="bg-primary text-white px-8 py-3 rounded-full font-bold text-xl mt-4">Soporte</a>

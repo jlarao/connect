@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /config.php
+Disallow: /contact-handler.php
+Disallow: /mikrotik/
+Disallow: /uploads/
+
+Sitemap: https://www.conectateya.mx/sitemap.xml

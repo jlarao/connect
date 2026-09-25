@@ -2,11 +2,12 @@
 
 <!-- Hero Section -->
 <section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-    <!-- Unsplash Hero Background -->
-    <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1596282806627-18c7e6ec848a?q=80&w=2070&auto=format&fit=crop" 
-             alt="Equipo de Fibra Óptica" 
-             class="w-full h-full object-cover">
+    <!-- Hero Background -->
+    <div class="absolute inset-0 z-0 bg-secondary">
+        <picture>
+            <source srcset="assets/images/hero-fiber.webp" type="image/webp">
+            <img src="assets/images/hero-fiber.jpg" alt="" width="2400" height="1800" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover">
+        </picture>
         <div class="absolute inset-0 hero-gradient"></div>
     </div>
 
@@ -17,12 +18,12 @@
                 <span class="text-sm font-semibold tracking-wide uppercase">Internet de Fibra optica y Antena</span>
             </div>
             
-            <h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight ">
-                <p> Bienvenido a <span class="text-primary">ConectateYa</span></p>
+            <h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight">
+                Bienvenido a <span class="text-primary">ConectateYa</span>
             </h1>
             
             <p class="text-xl text-slate-200 max-w-2xl leading-relaxed">
-                Somos una empresa mexicana con años de experiencia en el mercado, dedicada a ofrecer servicios de internet a nuestros clientes.
+                Somos una empresa mexicana con años de experiencia en el mercado, dedicada a ofrecer servicios de internet a nuestros clientes en Durango, Dgo.
             </p>
 
             <div class="flex flex-wrap gap-4 pt-4">

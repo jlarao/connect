@@ -1,4 +1,8 @@
-<?php include 'includes/header.php'; ?>
+<?php
+$pageTitle = 'Información Legal | ConectateYa';
+$pageDescription = 'Datos legales, domicilio y avisos de privacidad de ConectateYa, proveedor de Internet de Fibra Óptica y Radioenlace en Durango, Dgo.';
+include 'includes/header.php';
+?>
 
 <!-- Legal Hero Section -->
 <section class="relative pt-32 pb-16 overflow-hidden">

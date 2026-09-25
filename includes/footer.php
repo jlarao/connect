@@ -13,11 +13,8 @@
                         Lideramos la revolución digital con conexiones de alta fidelidad. Internet real para gente real.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors">
+                        <a href="https://www.facebook.com/zona.net.378/" target="_blank" rel="noopener" class="w-10 h-10 bg-white/5 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors">
                             <i data-lucide="facebook" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-primary/20 rounded-full flex items-center justify-center transition-colors">
-                            <i data-lucide="instagram" class="w-5 h-5"></i>
                         </a>
                     </div>
                 </div>
@@ -27,9 +24,9 @@
                     <h4 class="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">Empresa</h4>
                     <ul class="space-y-4">
                         <li><a href="index.php#inicio" class="hover:text-primary transition-colors">Inicio</a></li>
-                        <li><a href="index.php#beneficios" class="hover:text-primary transition-colors">Nosotros</a></li>
                         <li><a href="index.php#planes" class="hover:text-primary transition-colors">Planes de Venta</a></li>
                         <li><a href="index.php#contacto" class="hover:text-primary transition-colors">Cobertura</a></li>
+                        <li><a href="legal.php" class="hover:text-primary transition-colors">Legal</a></li>
                     </ul>
                 </div>
 
@@ -37,10 +34,10 @@
                 <div>
                     <h4 class="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">Servicios</h4>
                     <ul class="space-y-4">
-                        <li><a href="#" class="hover:text-primary transition-colors">Internet Fibra</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Internet Inalámbrico</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Soporte Técnico</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Pagos en Línea</a></li>
+                        <li><a href="index.php#planes" class="hover:text-primary transition-colors">Internet Fibra</a></li>
+                        <li><a href="index.php#planes" class="hover:text-primary transition-colors">Internet Inalámbrico</a></li>
+                        <li><a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>" class="hover:text-primary transition-colors">Soporte Técnico</a></li>
+                        <li><a href="index.php#contacto" class="hover:text-primary transition-colors">Pagos en Línea</a></li>
                     </ul>
                 </div>
 

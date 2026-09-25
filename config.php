@@ -70,8 +70,18 @@ define('WHATSAPP_MESSAGE', '¡Hola! Me interesa conocer más sobre los planes de
 // ===========================================
 // SEO (Público - OK para Git)
 // ===========================================
-define('META_TITLE', 'ConectateYa | Internet de Fibra Óptica e Inalámbrico de Alta Velocidad');
-define('META_DESCRIPTION', 'Conexión ultrarrápida y estable para tu hogar o empresa. Planes de Fibra Óptica y Radioenlace con soporte técnico local y especializado.');
+define('META_TITLE', 'ConectateYa | Internet Fibra Óptica y WiFi en Durango, Dgo.');
+define('META_DESCRIPTION', 'Internet de Fibra Óptica y Radioenlace en Durango, Dgo. Conexión ultrarrápida y estable para tu hogar o empresa, con soporte técnico local especializado.');
+
+// ===========================================
+// Ubicación del Negocio (Público - OK para Git)
+// ===========================================
+define('BUSINESS_CITY', 'Durango');
+define('BUSINESS_STATE', 'Durango');
+define('BUSINESS_POSTAL_CODE', '34324');
+define('BUSINESS_COUNTRY', 'MX');
+// Localidad exacta registrada en la ficha de Google Maps (distinta de la ciudad usada para marketing/SEO)
+define('BUSINESS_ADDRESS_LOCALITY', 'José María Pino Suárez');
 
 // ===========================================
 // Analytics (Cargado desde .env)
