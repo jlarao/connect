@@ -7,6 +7,7 @@
 
 # Carpeta de dependencias (si usas Composer en el futuro)
 /vendor/
+/node_modules/
 
 # Archivos de sistema
 .DS_Store

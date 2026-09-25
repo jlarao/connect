@@ -83,59 +83,8 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '<?php echo PRIMARY_COLOR; ?>',
-                        secondary: '<?php echo SECONDARY_COLOR; ?>',
-                        accent: '<?php echo ACCENT_COLOR; ?>',
-                        info: '<?php echo INFO_COLOR; ?>',
-                        bglight: '<?php echo BG_COLOR; ?>',
-                    },
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .nav-link {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: <?php echo PRIMARY_COLOR; ?>;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(0, 174, 239, 0.4) 100%);
-        }
-    </style>
+    <!-- Tailwind CSS (compilado localmente, ver package.json > build:css) -->
+    <link rel="stylesheet" href="assets/css/tailwind.min.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/tailwind.min.css'); ?>">
 </head>
 <body class="bg-bglight font-sans text-slate-700 antialiased overflow-x-hidden">
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-4 px-[5%] lg:px-[10%] flex justify-between items-center glass-nav">
