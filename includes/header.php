@@ -80,8 +80,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (autoalojado, ver assets/js/lucide.min.js) -->
+    <script src="assets/js/lucide.min.js?v=<?php echo filemtime(__DIR__ . '/../assets/js/lucide.min.js'); ?>"></script>
 
     <!-- Tailwind CSS (compilado localmente, ver package.json > build:css) -->
     <link rel="stylesheet" href="assets/css/tailwind.min.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/tailwind.min.css'); ?>">
