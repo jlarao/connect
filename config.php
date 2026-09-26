@@ -89,6 +89,12 @@ define('BUSINESS_ADDRESS_LOCALITY', 'José María Pino Suárez');
 define('GOOGLE_ANALYTICS_ID', env('GOOGLE_ANALYTICS_ID', ''));
 
 // ===========================================
+// Almacenamiento de Leads (Cargado desde .env)
+// ===========================================
+// En producción DEBE apuntar fuera del document root (ver .env.example)
+define('LEADS_LOG_PATH', env('LEADS_LOG_PATH', __DIR__ . '/uploads/leads.txt'));
+
+// ===========================================
 // Configuración de Planes (Público - OK para Git)
 // ===========================================
 define('PLANS', [

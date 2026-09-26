@@ -25,9 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // En un entorno real, usaríamos PHPMailer o una API como SendGrid.
     $mail_sent = @mail($to, $subject, $email_content, $headers);
 
-    // Guardar en un log local como respaldo (uploads/leads.txt)
+    // Guardar en un log local como respaldo (fuera del document root, ver LEADS_LOG_PATH)
     $log_entry = date('Y-m-d H:i:s') . " | $name | $phone | $location | $message\n";
-    file_put_contents('uploads/leads.txt', $log_entry, FILE_APPEND);
+    file_put_contents(LEADS_LOG_PATH, $log_entry, FILE_APPEND);
 
     // Redirección con parámetro de éxito
     header("Location: index.php?success=1#contacto");
