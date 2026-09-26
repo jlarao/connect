@@ -29,8 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $log_entry = date('Y-m-d H:i:s') . " | $name | $phone | $location | $message\n";
     file_put_contents(LEADS_LOG_PATH, $log_entry, FILE_APPEND);
 
-    // Redirección con parámetro de éxito
-    header("Location: index.php?success=1#contacto");
+    // Redirección con parámetro de éxito (whitelist para evitar open redirect)
+    $allowedPages = ['legal.php', 'index.php'];
+    $redirectPage = in_array($_POST['page'] ?? '', $allowedPages, true) ? $_POST['page'] : 'legal.php';
+    header("Location: $redirectPage?success=1");
     exit;
 } else {
     header("Location: index.php");

@@ -254,46 +254,6 @@
                     </picture>
                     <div class="absolute inset-0 bg-gradient-to-t from-secondary/50 to-transparent rounded-2xl"></div>
                 </div>
-                
-                <!-- <?php if (isset($_GET['success'])): ?>
-                    <div class="bg-primary/20 border border-primary/30 rounded-2xl p-6 mb-8 flex items-center gap-4 animate-fade-in">
-                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shrink-0">
-                            <i data-lucide="check-circle" class="text-white"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold">¡Solicitud Enviada!</h4>
-                            <p class="text-slate-400 text-sm">Un asesor validará tu zona y te contactará en breve.</p>
-                        </div>
-                    </div>
-                <?php endif; ?>
-                
-                <form action="contact-handler.php" method="POST" class="grid md:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-slate-400 text-xs font-bold uppercase tracking-wider">Nombre Completo</label>
-                        <input type="text" name="name" required placeholder="Ej. Juan Pérez" 
-                               class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary transition-all">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-slate-400 text-xs font-bold uppercase tracking-wider">WhatsApp</label>
-                        <input type="tel" name="phone" required placeholder="Ej. 55 1234 5678" 
-                               class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary transition-all">
-                    </div>
-                    <div class="md:col-span-2 space-y-2">
-                        <label class="text-slate-400 text-xs font-bold uppercase tracking-wider">Dirección / Colonia</label>
-                        <input type="text" name="location" required placeholder="¿Dónde necesitas el servicio?" 
-                               class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary transition-all">
-                    </div>
-                    <div class="md:col-span-2 space-y-2">
-                        <label class="text-slate-400 text-xs font-bold uppercase tracking-wider">Mensaje (Opcional)</label>
-                        <textarea name="message" rows="4" placeholder="¿Tienes alguna duda?" 
-                                  class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary transition-all resize-none"></textarea>
-                    </div>
-                    <div class="md:col-span-2 pt-4">
-                        <button type="submit" class="w-full bg-primary hover:bg-opacity-90 text-white font-black py-5 rounded-2xl transition-all shadow-xl shadow-primary/20 hover:-translate-y-1 uppercase tracking-widest">
-                            Enviar Solicitud de Cobertura
-                        </button>
-                    </div>
-                </form> -->
             </div>
         </div>
     </div>

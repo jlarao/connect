@@ -167,6 +167,7 @@ include 'includes/header.php';
                         <?php endif; ?>
                 
                         <form action="contact-handler.php" method="POST" class="grid md:grid-cols-2 gap-6">
+                            <input type="hidden" name="page" value="legal.php">
                             <div class="space-y-2">
                                 <label class="text-slate-500 text-xs font-bold uppercase tracking-wider">Nombre Completo</label>
                                 <input type="text" name="name" required placeholder="Ej. Juan Pérez"
@@ -175,6 +176,11 @@ include 'includes/header.php';
                             <div class="space-y-2">
                                 <label class="text-slate-500 text-xs font-bold uppercase tracking-wider">Número</label>
                                 <input type="tel" name="phone" required placeholder="Ej. 55 1234 5678"
+                                    class="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 text-secondary placeholder:text-slate-400 focus:outline-none focus:border-primary transition-all">
+                            </div>
+                            <div class="md:col-span-2 space-y-2">
+                                <label class="text-slate-500 text-xs font-bold uppercase tracking-wider">Dirección / Colonia</label>
+                                <input type="text" name="location" required placeholder="¿Dónde necesitas el servicio?"
                                     class="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 text-secondary placeholder:text-slate-400 focus:outline-none focus:border-primary transition-all">
                             </div>
 
