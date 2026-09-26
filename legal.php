@@ -168,20 +168,20 @@ include 'includes/header.php';
                 
                         <form action="contact-handler.php" method="POST" class="grid md:grid-cols-2 gap-6">
                             <div class="space-y-2">
-                                <label class="text-slate-400 text-xs font-bold uppercase tracking-wider">Nombre Completo</label>
-                                <input type="text" name="name" required placeholder="Ej. Juan Pérez" 
-                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary transition-all">
+                                <label class="text-slate-500 text-xs font-bold uppercase tracking-wider">Nombre Completo</label>
+                                <input type="text" name="name" required placeholder="Ej. Juan Pérez"
+                                    class="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 text-secondary placeholder:text-slate-400 focus:outline-none focus:border-primary transition-all">
                             </div>
                             <div class="space-y-2">
-                                <label class="text-slate-400 text-xs font-bold uppercase tracking-wider">Número</label>
-                                <input type="tel" name="phone" required placeholder="Ej. 55 1234 5678" 
-                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary transition-all">
+                                <label class="text-slate-500 text-xs font-bold uppercase tracking-wider">Número</label>
+                                <input type="tel" name="phone" required placeholder="Ej. 55 1234 5678"
+                                    class="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 text-secondary placeholder:text-slate-400 focus:outline-none focus:border-primary transition-all">
                             </div>
 
                             <div class="md:col-span-2 space-y-2">
-                                <label class="text-slate-400 text-xs font-bold uppercase tracking-wider">Mensaje</label>
-                                <textarea name="message" required rows="4" placeholder="Escribe tu mensaje" 
-                                        class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary transition-all resize-none"></textarea>
+                                <label class="text-slate-500 text-xs font-bold uppercase tracking-wider">Mensaje</label>
+                                <textarea name="message" required rows="4" placeholder="Escribe tu mensaje"
+                                        class="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 text-secondary placeholder:text-slate-400 focus:outline-none focus:border-primary transition-all resize-none"></textarea>
                             </div>
                             <div class="md:col-span-2 pt-4">
                                 <button type="submit" class="w-full bg-primary hover:bg-opacity-90 text-white font-black py-5 rounded-2xl transition-all shadow-xl shadow-primary/20 hover:-translate-y-1 uppercase tracking-widest">
